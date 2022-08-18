@@ -63,12 +63,4 @@ def reddit_data():
                 }
     all_data.append(data)
     # convert the list to dataframe   
-    df = pd.DataFrame(all_data)
-            'upvote_ratio': post['data']['upvote_ratio'],
-            'score': post['data']['score'],
-            'selftext': post['data']['selftext'],
-            'subreddit': post['data']['subreddit']
-            }
-    all_data.append(data)
-    # convert the list to dataframe   
-    df = pd.DataFrame(all_data)
+    return pd.DataFrame(all_data)   
