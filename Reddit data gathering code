@@ -61,6 +61,6 @@ def reddit_data():
                 'selftext': post['data']['selftext'],
                 'subreddit': post['data']['subreddit']
                 }
-    all_data.append(data)
+        all_data.append(data)
     # convert the list to dataframe   
     return pd.DataFrame(all_data)   
