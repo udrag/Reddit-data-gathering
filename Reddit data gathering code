@@ -40,11 +40,9 @@ headers = {**headers, **{'Authorization': f'Bearer {token}'}}
 
 def reddit_data():
     # url as a string with the users input for the name of the Reddit subpost
-    print('Please enter the name of the Reddit subpost.')
-    subreddit = "https://oauth.reddit.com/r/" + str(input().lower())
+    subreddit = "https://oauth.reddit.com/r/" + str(input('Please enter the name of the Reddit subpost.').lower())
     # users input on the limit of posts
-    print('Please enter the total number of Reddit subpost.')
-    limit = int(input())
+    limit = int(input('Please enter the total number of Reddit subpost.'))
     # initiate a request for data based on the users input
     response = requests.get(subreddit,
                    headers=headers, params={'limit':limit})
